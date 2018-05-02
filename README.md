@@ -1,11 +1,11 @@
-## Deploy-kit
+## Kenote-Deploy-kit
 
 A nice deployment tool supports ftp and sftp. Used directly or with built-in plugins, such as webpack-plugin.
 
-![image](https://raw.githubusercontent.com/xiaoyann/deploy-kit/master/pic.png)
+![image](https://raw.githubusercontent.com/thondery/kenote-deploy-kit/master/pic.png)
 
 ```
-yarn add deploy-kit --dev
+yarn add kenote-deploy-kit --dev
 ```
 
 ## Basic usage
@@ -103,7 +103,7 @@ $ ./bin/deploy-ftp ...
     // deploy files in ./dist to /data1/htdocs/testapp on 10.13.1.2
     $ deploy-sftp -s user:pwd@10.13.1.2:22 --i *.map ./dist /data1/htdocs/testapp
 
-  version: 3.1.0
+  version: 1.0.0
 ```
 
 #### using config file
@@ -147,7 +147,7 @@ new DeployPlugin([config])
 
 
 ```js
-const DeployPlugin = require('deploy-kit/plugins/sftp-webpack-plugin')
+const DeployPlugin = require('kenote-deploy-kit/plugins/sftp-webpack-plugin')
 
 // webpack configuration
 moudle.exports = {

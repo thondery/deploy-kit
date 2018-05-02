@@ -1,18 +1,19 @@
 {
-  "name": "deploy-kit",
-  "version": "3.5.0",
+  "name": "kenote-deploy-kit",
+  "version": "1.0.0",
   "description": "A nice deployment tool supports ftp and sftp. Used directly or with built-in plugins, such as webpack-plugin.",
   "main": "lib/index.js",
   "bin": {
     "deploy-ftp": "bin/deploy-ftp",
     "deploy-sftp": "bin/deploy-sftp"
   },
-  "repository": "git+https://github.com/xiaoyann/deploy-kit.git",
+  "repository": "git+https://github.com/thondery/kenote-deploy-kit.git",
   "keywords": [
     "deploy",
     "ftp",
     "webpack",
     "sftp",
+    "ssh",
     "upload"
   ],
   "files": [
@@ -23,9 +24,9 @@
   "author": "xiaoyann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xiaoyann/deploy-kit/issues"
+    "url": "https://github.com/thondery/kenote-deploy-kit/issues"
   },
-  "homepage": "https://github.com/xiaoyann/deploy-kit#readme",
+  "homepage": "https://github.com/thondery/kenote-deploy-kit#readme",
   "dependencies": {
     "async": "^2.5.0",
     "chalk": "^2.0.1",
@@ -33,6 +34,7 @@
     "ftp": "^0.3.10",
     "glob": "^7.1.2",
     "minimatch": "^3.0.4",
-    "scp2": "^0.5.0"
+    "scp2": "^0.5.0",
+    "url-parse-lax": "^3.0.0"
   }
 }
