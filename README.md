@@ -23,6 +23,8 @@ client.sftp({
   ignore: '**/*.map',
   // where the files are placed on the server
   deployTo: '/data1/htdocs/testapp',
+  // files patterns
+  patterns: ['**'],
   // you can specify different place for each file
   rules: [
     {
