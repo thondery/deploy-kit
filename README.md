@@ -11,7 +11,7 @@ yarn add kenote-deploy-kit --dev
 ## Basic usage
 
 ```js
-const client = require('deploy-kit')
+const client = require('kenote-deploy-kit')
 
 client.sftp({
   // sever account, address, port
@@ -133,6 +133,51 @@ If you prefer to place the configuration file in another place, you can use `-c,
 ```
 $ ./bin/deploy-sftp --config ./config/your_conf.js
 ```
+
+### using multiple profiles
+
+create a `deploy。config.js` file in the root directory of your project like this:
+
+```js
+module.exports = {
+  ['project-label']: {
+    name: 'project-name',
+    sftp: {
+      server: '',
+      privateKey: '',
+      workspace: '',
+      deployTo: '',
+      patterns: ['.**/**', '**'],
+      ignore: []
+    },
+    scripts: {
+      'script-label': 'sh-script',
+      ...
+    }
+  }
+}
+```
+
+`package.json`
+
+```json
+{
+  "scripts": {
+    "deploy": "deploy-proxy"
+  }
+}
+```
+
+Runing.
+
+```bash
+yarn deploy <project-label> --script=<script-label>
+```
+or
+```bash
+yarn deploy
+```
+
 
 ## Used with plugins
 
